@@ -17,24 +17,18 @@ html
 
 /* Nav Bar */
 
-#header
-{
-    background-color: azure;
-    width: auto;
-    height: 15vh;
-}
-
 #nav_bar ul
 {
     /* background-color: gray; */
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
-    width: auto;
+    width: 100vw;
     height: 10vh;
+    margin-top: 1rem;
 }
 
 .nav_links
