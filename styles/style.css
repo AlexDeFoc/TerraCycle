@@ -16,6 +16,8 @@ html
     color: #F2F2F2;
 }
 
+
+
 /* Nav Bar */
 
 #nav_bar ul
@@ -86,6 +88,7 @@ html
     background-color: #070707;
 }
 
+/* Media Queries */
 @media only screen and (max-width: 500px)
 {
     #nav_bar ul
