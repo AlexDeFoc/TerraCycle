@@ -74,9 +74,10 @@ html
     position: absolute;
     bottom: 0;
     background-color: #070707;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    justify-items: center;
     align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
 }
 
 #copyright
@@ -84,7 +85,6 @@ html
     font-size: 2rem;
     background-color: #070707;
 }
-
 
 @media only screen and (max-width: 500px)
 {
