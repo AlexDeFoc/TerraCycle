@@ -21,7 +21,7 @@ html
 {
     background-color: azure;
     width: 100%;
-    height: 50vh;
+    height: 15vh;
 }
 
 #nav_bar > ul
@@ -29,23 +29,19 @@ html
     /* background-color: gray; */
 
     display: flex;
+    flex-grow: auto;
     justify-content: space-between;
     align-items: center;
 
     width: 100%;
     height: 10vh;
 
-
-    animation: 2s Nav_Land;
     padding: 0 55rem;
 }
 
 .nav_links
 {
     list-style: none;
-    animation: 5s Nav_Land_Links;
-    margin: 0rem 0rem;
-    padding: 0 1rem;
 }
 
 .nav_text
@@ -53,7 +49,7 @@ html
     text-decoration: none;
     font-size: 4rem;
 
-    animation: ease-in-out 600ms Nav_Land_Text;
+    animation: 1s Nav_Land_Text;
 }
 
 /* Main Show */
@@ -66,24 +62,12 @@ html
 {
     0%
     {
-        padding: 0rem 70rem; 
+        padding: 0rem 55rem; 
     }
 
     100%
     {
         padding: 0 55rem; 
-    }
-}
-@keyframes Nav_Land_Links
-{
-    0%
-    {
-        margin: 0rem 0rem; 
-    }
-
-    100%
-    {
-        margin: 0rem 0rem; 
     }
 }
 @keyframes Nav_Land_Text
