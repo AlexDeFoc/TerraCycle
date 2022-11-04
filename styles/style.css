@@ -20,16 +20,92 @@ html
 #header
 {
     background-color: azure;
+    width: 100%;
+    height: 50vh;
 }
 
-#nav_bar
+#nav_bar > ul
 {
+    /* background-color: gray; */
+
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: antiquewhite;
+
+    width: 100%;
+    height: 10vh;
+
+
+    animation: 2s Nav_Land;
+    padding: 0 55rem;
 }
+
+.nav_links
+{
+    list-style: none;
+    animation: 5s Nav_Land_Links;
+    margin: 0rem 0rem;
+    padding: 0 1rem;
+}
+
+.nav_text
+{
+    text-decoration: none;
+    font-size: 4rem;
+
+    animation: ease-in-out 600ms Nav_Land_Text;
+}
+
 /* Main Show */
 /* Main Products */
 /* Short About Us */
 /* Footer */
+
+/* Keyframes */
+@keyframes Nav_Land
+{
+    0%
+    {
+        padding: 0rem 70rem; 
+    }
+
+    100%
+    {
+        padding: 0 55rem; 
+    }
+}
+@keyframes Nav_Land_Links
+{
+    0%
+    {
+        margin: 0rem 0rem; 
+    }
+
+    100%
+    {
+        margin: 0rem 0rem; 
+    }
+}
+@keyframes Nav_Land_Text
+{
+    0%
+    {
+        font-size: 0.01rem;
+        /* font-size: 1rem; */
+        margin-top: 1rem;
+    }
+
+    100%
+    {
+        font-size: 4rem;
+        margin-top: 0rem;
+    }
+}
+
+@media screen and (max-width : 1600px)
+{
+    #nav_bar > ul
+    {
+        flex-direction: column;
+    }
+}
