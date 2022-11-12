@@ -1,37 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 :root
 {
     font-size: 62.5%; /* Sets Font to base ten */
 
     /* Variables */
     /*Tdark means ThemeDark*/
+    /*__ means :: example ::selection*/
     --background-color-Tdark_page: #070707;
     --background-color-Tdark-nav: #a0ff88a8;
     --background-color_Tdark_left-form: #092203;
     --background-color-Tdark-footer: #0e3f10a8;
-    --color-white_text: #eeeeee;
+    --color-white_Tdark_page_text: #eeeeee;
+    --color-white_Tdark_text_form: #070707;
+    --color-white_Tdark__selected_text_-form: #ACCEF7;
 }
 
 *
 {
     box-sizing: border-box;
-    overflow-x: hidden;
+    
     margin: 0;
     padding: 0;
-
-    color: var(--color-white_text);
-
+    
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-
+    
+    color: var(--color-white_Tdark_page_text);
+    
     list-style: none;
     text-decoration: none;
+
+    overflow-x: hidden;
 }
 
 body
 {
-    background-color: var(--background-color-Tdark_page);
     width: 100vw;
+
+    background-color: var(--background-color-Tdark_page);
 }
 
 /* Nav Bar */
@@ -56,7 +62,6 @@ body
     align-items: center;
 
     background-color: var(--background-nav-black);
-
 }
 
 #header > .nav_bar > .nav_links
@@ -66,30 +71,28 @@ body
 
 .nav_text
 {
-    background-color: var(--background-nav-black);
     font-size: 3rem;
+
+    background-color: var(--background-nav-black);
 }
 
 /* Main Show */
 #main 
 {
-    position: relative;
     width: 100vw;
     height: calc(100vh - 10vh - 10vh);
+
+    position: relative;
 }
 
 #main > #main_bg
 {
+    width: 100vw;
+    height: calc(100vh - 10vh - 10vh);
+
     position: absolute;
     top: 0;
     left: 0;
-    /* display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center; */
-
-    width: 100vw;
-    height: calc(100vh - 10vh - 10vh);
 
     background-image: url(../img/contact_bg.png);
     background-position: center;
@@ -119,7 +122,20 @@ body
     position: absolute;
     left: 0;
 
+    border-radius: 2rem 0 0 2rem;
+
     background-color: var(--background-color_Tdark_left-form);
+}
+
+#main > .form_container > .left > .contact-us_text
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 4rem;
+    color: white;
 }
 
 #main > .form_container > .right
@@ -130,6 +146,8 @@ body
     position: absolute;
     right: 0;
     
+    border-radius: 0 2rem 2rem 0;
+
     background-color: white;
 }
 
@@ -137,48 +155,226 @@ body
 {
     width: 100%;
     height: 100%;
+    
+    padding-top: 0.5rem;
 
-    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 4rem 2rem 8rem) 4rem 2rem 20rem 10rem; /*WE need 10, 7 used and 3 spaces*/
 }
 
-#main > .form_container > .right > form > input[type=text]
+#main > .form_container > .right > form > .name_container
+{
+    width: 100%;
+    height: 100%;
+
+    grid-row: 1/4;
+}
+
+#main > .form_container > .right > form > .email_container
+{
+    width: 100%;
+    height: 100%;
+
+    grid-row: 4/7;
+}
+
+#main > .form_container > .right > form > .reason_container
+{
+    width: 100%;
+    height: 100%;
+
+    grid-row: 7/10;
+
+    overflow-y: overlay;
+}
+
+#main > .form_container > .right > form > .reason_container::-webkit-scrollbar
+{
+    width: 1rem;
+}
+
+#main > .form_container > .right > form > .reason_container::-webkit-scrollbar-track
+{
+    background: rgba(0, 0, 0, 0);
+}
+
+#main > .form_container > .right > form > .reason_container::-webkit-scrollbar-thumb
+{
+    background: rgb(31, 175, 91);
+}
+
+#main > .form_container > .right > form > .reason_container::-webkit-scrollbar-thumb:hover
+{
+    background: rgb(6, 36, 18);
+}
+
+#main > .form_container > .right > form > .submit_container
+{
+    width: 100%;
+    height: 100%;
+
+    grid-row: 10/11;
+}
+
+#main > .form_container > .right > form > .name_container > .name
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+#main > .form_container > .right > form > .email_container > .email
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+#main > .form_container > .right > form > .reason_container > .reason
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#main > .form_container > .right > form > .submit_container > .submit
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main > .form_container > .right > form > .name_container > .name > label
+{
+    grid-row: 1 / 2;
+
+    font-size: 2.5rem;
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .name_container > .name > label::selection
+{
+    background-color: var(--color-white_Tdark__selected_text_-form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .name_container > .name > input[type=text]
 {
     width: 65%;
+
+    grid-row: 2 / 3;
+
     padding: 1rem 3rem;
+
+    font-size: 2rem;
+    color: var(--color-white_Tdark_text_form);
 
     border: 0.5rem solid #092203;
     border-bottom: 1rem solid #092203;
     border-radius: 2rem;
 
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
 }
 
-#main > .form_container > .right > form > input[type=email]
+#main > .form_container > .right > form > .name_container > .name > input[type=text]::selection
+{    
+    background-color: var(--color-white_Tdark__selected_text_-form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .email_container > .email > label
+{
+    grid-row: 1 / 2;
+
+    font-size: 2.5rem;
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .email_container > .email > label::selection
+{
+    background-color: var(--color-white_Tdark__selected_text_-form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .email_container > .email > input[type=email]
 {
     width: 65%;
+
+    grid-row: 2 / 3;
+
     padding: 1rem 3rem;
+
+    font-size: 2rem;
+    color: var(--color-white_Tdark_text_form);
 
     border: 0.5rem solid #092203;
     border-bottom: 1rem solid #092203;
     border-radius: 2rem;
 
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
 }
 
-#main > .article_container > .article
+#main > .form_container > .right > form > .email_container > .email > input[type=email]::selection
 {
-    margin: 2rem 7rem;
+    background-color: var(--color-white_Tdark__selected_text_-form);
+    color: var(--color-white_Tdark_text_form);
 }
 
-#main > .article_container > .article > .article_text
+#main > .form_container > .right > form > .reason_container > .reason > label
 {
-    font-size: 1.75rem;
-    text-indent: 2rem;
-    text-align: justify;
+    grid-row: 1 / 2;
+
+    margin-bottom: 1rem;
+
+    font-size: 2.5rem;
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .reason_container > .reason > label::selection
+{
+    background-color: var(--color-white_Tdark__selected_text_-form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .reason_container > .reason > textarea
+{
+    max-width: 90%;
+
+    padding: 1rem 3rem;
+
+    grid-row: 2 / 3;
+
+    font-size: 2rem;
+    color: var(--color-white_Tdark_text_form);
+    
+    border: 0.5rem solid #092203;
+    border-bottom: 1rem solid #092203;
+    border-radius: 0.5rem;
+}
+
+#main > .form_container > .right > form > .reason_container > .reason > textarea::selection
+{
+    background-color: var(--color-white_Tdark__selected_text_-form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+::-webkit-resizer
+{
+    border: 9px solid rgba(0,0,0,.1);
+    border-bottom-color: rgba(0,0,0,.5);
+    border-right-color: rgba(0,0,0,.5);
+    outline: 1px solid rgba(0,0,0,.2);
+    box-shadow: 0 0 5px 3px rgba(0,0,0,.1)
+}
+
+#main > .form_container > .right > form > .submit_container > .submit > input[type=submit]
+{
+    padding: .8rem 0rem;
+
+    border: 0.5rem solid #092203;
+    border-bottom: 1rem solid #092203;
+    border-radius: 2rem;
+
+    color: var(--color-white_Tdark_text_form);
+    font-size: 2.8rem;
 }
 
 /* Footer */

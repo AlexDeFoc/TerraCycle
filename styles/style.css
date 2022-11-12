@@ -15,23 +15,26 @@
 *
 {
     box-sizing: border-box;
-    overflow-x: hidden;
+    
     margin: 0;
     padding: 0;
-
-    color: var(--color-white_text);
-
+    
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-
+    
+    color: var(--color-white_text);
+    
     list-style: none;
     text-decoration: none;
+
+    overflow-x: hidden;
 }
 
 body
 {
-    background-color: var(--background-color-Tdark_page);
     width: 100vw;
+
+    background-color: var(--background-color-Tdark_page);
 }
 
 #header
@@ -55,7 +58,6 @@ body
     align-items: center;
 
     background-color: var(--background-nav-black);
-
 }
 
 #header > .nav_bar > .nav_links
@@ -67,24 +69,31 @@ body
 
 .nav_text
 {
-    background-color: var(--background-nav-black);
     font-size: 3rem;
+
+    background-color: var(--background-nav-black);
 }
 
 .hamburger
 {
     display: none;
+
     padding: 2rem 3rem;
+
     background-color: var(--background-nav-black);
 }
 
 .bar
 {
     display: block;
-    margin: .5rem 0rem;
-    border-radius: 10%;
+
     width: 8rem;
     height: 2rem;
+
+    margin: .5rem 0rem;
+
+    border-radius: 10%;
+
     background-color: var(--color-text-white);
 }
 
@@ -94,6 +103,7 @@ body
 {
     width: 100vw;
     height: calc(100vh - 10.515vh - 10.515vh);
+
     margin-top: 3rem;
 }
 
@@ -116,13 +126,13 @@ body
 #main > .article_container > .article > .article_text
 {
     font-size: 1.75rem;
+
     text-indent: 2rem;
     text-align: justify;
 }
-/* Main Products */
-/* Short About Us */
-/* Footer */
 
+
+/* Footer */
 #footer
 {
     width: 100vw;

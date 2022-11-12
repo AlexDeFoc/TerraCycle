@@ -33,23 +33,42 @@
 
         <div class="form_container">
             <div class="left">
+                <p class="contact-us_text">Contact Us!</p>
             </div>
             <div class="right">
-                <form action="/action_page.php">
-                    <label for="name">Name</label><br>
-                    <input type="text" id="name" name="name" value="amigus"></form>
+                <form action="https://formspree.io/f/xknekldj" method="POST">
+                    <section class="name_container">
+                        <section class="name">
+                            <label for="name">Numele</label>
+                            <input type="text" id="name" name="Name:" value="Mihai"></input>
+                        </section>
+                    </section>
 
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email" value="amigus@comicon.com"></form>
+                    <section class="email_container">
+                        <section class="email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="Email:" value="mihail123@gmail.com"></input>
+                        </section>
+                    </section>
+                    
+                    <section class="reason_container">
+                        <section class="reason">
+                            <label for="reason">Motivul Contactării</label>
+                            <textarea rows="7" cols="40" id="reason" name="Motivul contactării" value="În ultima perioadă am probleme cu..."></textarea>
+                        </section>
+                    </section>
 
-                    <label for="reason">Reason of Contact</label><br>
-                    <textarea rows="20" cols="50" id="reason" name="reason" value="amigus is the impostor"></form>
+                    <section class="submit_container">
+                        <section class="submit">
+                            <input type="submit" value="Submit"></input>
+                        <section>
+                    </section>
                 </form>
             </div>
         </div>
     </main>
-    <!-- Footer -->
 
+    <!-- Footer -->
     <footer id="footer">
         <div class="socials_container">
             
