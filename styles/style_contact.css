@@ -416,7 +416,7 @@ textarea:focus, input:focus{
     height: 10vh;
 
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
 
     justify-content: center;
     align-items: center;
@@ -544,5 +544,51 @@ textarea:focus, input:focus{
     .hamburger.active .bar:nth-child(3)
     {
         transform: translateY(-2.5rem) rotate(-50deg);
+    }
+}
+
+@media only screen and (max-width: 500px), screen and (max-height: 1000px)
+{
+
+    #header
+    {
+        height: auto;
+    }
+
+    #header > .nav_bar_container.active
+    {
+        height: auto;
+    }
+
+    #main > .form_container > .left > .contact-us_container > .contact-us_text
+    {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    
+    #footer
+    {
+        flex-flow: row nowrap;
+        height: auto;
+    }
+    
+    .bar
+    {
+
+        width: 6rem;
+        height: 1.3rem;
+
+        margin: .5rem 0rem;
+    }
+    
+    .hamburger.active .bar:nth-child(1)
+    {
+        transform: translateY(1.8rem) rotate(50deg);
+    }
+
+    .hamburger.active .bar:nth-child(3)
+    {
+        transform: translateY(-1.8rem) rotate(-50deg);
     }
 }
