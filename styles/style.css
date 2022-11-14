@@ -96,19 +96,21 @@ body
 }
 
 /* Main Show */
+/* Main Show */
+/* Main Show */
+/* Main Show */
 
-#main 
+
+/* #main 
 {
     width: 100vw;
-    height: calc(100vh - 10vh - 10vh);
+    height: 100vh;
 
     margin-top: 3rem;
 }
 
-#main > .article_container
+#main > .main_container > .article_container
 {
-    width: 100vw;
-
     display: flex;
     flex-flow: column wrap;
     
@@ -116,25 +118,29 @@ body
     align-items: center;
 }
 
-#main > .article_container > .article
+#main > .main_container > .article_container > .article
 {
     margin: 2rem 7rem;
 }
 
-#main > .article_container > .article > .article_text
+#main > .main_container > .article_container > .article > .article_text
 {
     font-size: 1.75rem;
 
     text-indent: 2rem;
     text-align: justify;
-}
+} */
 
 
 /* Footer */
-#footer
+/* Footer */
+/* Footer */
+/* Footer */
+
+/* #footer
 {
-    width: 100vw;
-    height: 10vh;
+    position: absolute;
+    bottom: 0;
 
     display: flex;
     flex-flow: column wrap;
@@ -158,6 +164,25 @@ body
 #footer > .socials_container > .twitter_icon
 {
     margin-right: 4rem;
+} */
+
+main
+{
+    width: 100%;
+    height: auto;
+}
+
+main > #wrapper
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.hero
+{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
 /* Media Queries */
