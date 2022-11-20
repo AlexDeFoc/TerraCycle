@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+:root
+{
+    font-size: 62.5%; /* Sets Font to base ten */
+
+    /* Variables */
+    /*Tdark means ThemeDark*/
+    /*__ means :: example ::selection*/
+    --background-color-Tdark_page: #070707;
+    --background-color-Tdark-nav: #6baa5c;
+    --background-color-Tdark-nav_hamburger-bars: #eeeeee;
+    --background-color_Tdark_left-form: #092203a2;
+    --background-color_Tdark_right-form: rgba(255, 255, 255, 0.603);
+    --background-color-Tdark-footer: #0e3f10a8;
+    --color-white_Tdark_page_text: #eeeeee;
+    --color-white_Tdark_text_form: #070707;
+    --color-white_Tdark__selected_text_form: #ACCEF7;
+}
+
+*
+{
+    box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    
+    color: var(--color-white_Tdark_page_text);
+    
+    list-style: none;
+    text-decoration: none;
+
+    overflow-x: hidden;
+}
+
+body
+{
+    width: 100vw;
+
+    background-color: var(--background-color-Tdark_page);
+}
+
+/* Nav Bar */
+#header
+{
+    width: 100vw;
+    height: 10vh;
+
+    background-color: var(--background-color-Tdark-nav);
+}
+
+#header > .nav_bar_container > .nav_bar
+{
+    width: 100vw;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger
+{
+    display: none;
+
+    margin: 1rem 2rem;
+}
+
+.bar
+{
+    display: block;
+
+    width: 8rem;
+    height: 2rem;
+
+    margin: .5rem 0rem;
+
+    border-radius: 10%;
+
+    background-color: var(--background-color-Tdark-nav_hamburger-bars);
+}
+
+#header > .nav_bar_container > .nav_bar > .nav_links
+{
+    margin: 0 4rem;
+}
+
+.nav_text
+{
+    font-size: 3rem;
+}
+
+
+/* Main Show */
+#main 
+{
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+}
+
+#main > #main_bg
+{
+    width: 100vw;
+    height: calc(100vh - 10vh - 10vh);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url(../img/contact_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(12px) brightness(40%) saturate(120%);
+}
+
+#main > .form_container
+{
+    width: 60vw;
+    height: 70vh;
+    
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#main > .form_container > .left
+{
+    width: 40%;
+    height: 100%;
+    
+    position: absolute;
+    left: 0;
+
+    border-radius: 2rem 0 0 2rem;
+
+    background-color: var(--background-color_Tdark_left-form);
+}
+
+#main > .form_container > .left > .contact-us_container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main > .form_container > .left > .contact-us_container > .contact-us_text
+{
+    font-size: 4rem;
+    color: var(--color-white_Tdark_page_text);
+}
+
+#main > .form_container > .right
+{
+    width: 60%;
+    height: 100%;
+    
+    position: absolute;
+    right: 0;
+    
+    border-radius: 0 2rem 2rem 0;
+
+    background-color: var(--background-color_Tdark_right-form);
+}
+
+#main > .form_container > .right > form
+{
+    width: 100%;
+    height: 100%;
+    
+    padding-top: 0.5rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, 4rem 2rem 8rem) 4rem 2rem 20rem 10rem; /*WE need 10, 7 used and 3 spaces*/
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#main > .form_container > .right > form > .name_container
+{
+    width: 100%;
+    height: 100%;
+
+    grid-row: 1/4;
+}
+
+#main > .form_container > .right > form > .email_container
+{
+    width: 100%;
+    height: 100%;
+
+    grid-row: 4/7;
+}
+
+#main > .form_container > .right > form > .reason_container
+{
+    width: 100%;
+    height: 100%;
+
+    grid-row: 7/10;
+
+    overflow-y: overlay;
+}
+
+#main > .form_container > .right > form > .reason_container::-webkit-scrollbar
+{
+    width: 1rem;
+}
+
+#main > .form_container > .right > form > .reason_container::-webkit-scrollbar-track
+{
+    background: rgba(0, 0, 0, 0);
+}
+
+#main > .form_container > .right > form > .reason_container::-webkit-scrollbar-thumb
+{
+    background: rgb(31, 175, 91);
+}
+
+#main > .form_container > .right > form > .reason_container::-webkit-scrollbar-thumb:hover
+{
+    background: rgb(6, 36, 18);
+}
+
+#main > .form_container > .right > form > .submit_container
+{
+    width: 100%;
+    height: 100%;
+
+    grid-row: 10/11;
+}
+
+#main > .form_container > .right > form > .name_container > .name
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+#main > .form_container > .right > form > .email_container > .email
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+#main > .form_container > .right > form > .reason_container > .reason
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#main > .form_container > .right > form > .submit_container > .submit
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main > .form_container > .right > form > .name_container > .name > label
+{
+    grid-row: 1 / 2;
+
+    font-size: 2.5rem;
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .name_container > .name > label::selection
+{
+    background-color: var(--color-white_Tdark__selected_text_form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .name_container > .name > input[type=text]
+{
+    width: 65%;
+
+    grid-row: 2 / 3;
+
+    padding: 1rem 3rem;
+
+    font-size: 2rem;
+    color: var(--color-white_Tdark_text_form);
+
+    border: 0.5rem solid #092203;
+    border-bottom: 1rem solid #092203;
+    border-radius: 2rem;
+    
+    background-color: var(--background-color_Tdark_right-form);
+}
+
+#main > .form_container > .right > form > .name_container > .name > input[type=text]::selection
+{    
+    background-color: var(--color-white_Tdark__selected_text_form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .email_container > .email > label
+{
+    grid-row: 1 / 2;
+
+    font-size: 2.5rem;
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .email_container > .email > label::selection
+{
+    background-color: var(--color-white_Tdark__selected_text_form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .email_container > .email > input[type=email]
+{
+    width: 65%;
+
+    grid-row: 2 / 3;
+
+    padding: 1rem 3rem;
+
+    font-size: 2rem;
+    color: var(--color-white_Tdark_text_form);
+
+    border: 0.5rem solid #092203;
+    border-bottom: 1rem solid #092203;
+    border-radius: 2rem;
+
+    background-color: var(--background-color_Tdark_right-form);
+}
+
+#main > .form_container > .right > form > .email_container > .email > input[type=email]::selection
+{
+    background-color: var(--color-white_Tdark__selected_text_form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .reason_container > .reason > label
+{
+    grid-row: 1 / 2;
+
+    margin-bottom: 1rem;
+
+    font-size: 2.5rem;
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .reason_container > .reason > label::selection
+{
+    background-color: var(--color-white_Tdark__selected_text_form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+#main > .form_container > .right > form > .reason_container > .reason > textarea
+{
+    max-width: 90%;
+
+    padding: 1rem 3rem;
+
+    grid-row: 2 / 3;
+
+    font-size: 2rem;
+    color: var(--color-white_Tdark_text_form);
+    
+    border: 0.5rem solid #092203;
+    border-bottom: 1rem solid #092203;
+    border-radius: 0.5rem;
+
+    background-color: var(--background-color_Tdark_right-form);
+}
+
+#main > .form_container > .right > form > .reason_container > .reason > textarea::selection
+{
+    background-color: var(--color-white_Tdark__selected_text_form);
+    color: var(--color-white_Tdark_text_form);
+}
+
+::-webkit-resizer
+{
+    border: 9px solid rgba(0,0,0,.1);
+    border-bottom-color: rgba(0,0,0,.5);
+    border-right-color: rgba(0,0,0,.5);
+    outline: 1px solid rgba(0,0,0,.2);
+    box-shadow: 0 0 5px 3px rgba(0,0,0,.1)
+}
+
+#main > .form_container > .right > form > .submit_container > .submit > input[type=submit]
+{
+    padding: .8rem 2rem;
+
+    border: 0.5rem solid #092203;
+    border-bottom: 1rem solid #092203;
+    border-radius: 2rem;
+
+    color: var(--color-white_Tdark_text_form);
+    font-size: 2.8rem;
+
+    background-color: var(--background-color_Tdark_right-form);
+}
+
+/* Footer */
+#footer
+{
+    width: 100vw;
+    height: 10vh;
+
+    display: flex;
+    flex-flow: column wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--background-color-Tdark-footer);
+}
+
+#footer > .copyright_container > .copyright
+{
+    font-size: 2rem;
+}
+
+#footer > .copyright_container > .copyright
+{
+    font-size: 2rem;
+}
+
+#footer > .socials_container > .twitter_icon
+{
+    margin-right: 4rem;
+}
+
+@media only screen and (max-width:1500px)
+{
+    #main > .form_container > .left > .contact-us_container > .contact-us_text
+    {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 1200px)
+{
+
+
+    #main > .form_container
+    {
+        display: grid;
+        grid-template-rows: 40% 60%;
+        grid-template-columns: 1fr;
+    }
+
+    #main > .form_container > .left
+    {
+        width: 100%;
+        height: 100%;
+
+        grid-row: 1 / 2;
+        
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    #main > .form_container > .right
+    {
+        width: 100%;
+        height: 100%;
+        
+        grid-row: 2 / 3;
+        
+        border-radius: 0 0 2rem 2rem;
+    }
+}
+@media only screen and (max-width: 720px)
+{
+    #header.active
+    {
+        height: 100vh;
+    }
+
+    #header.active > .nav_bar_container
+    {
+        height: 90vh;
+    }
+
+    #header > .nav_bar_container > .nav_bar
+    {
+        display: none;
+        height: 100%;
+        
+        flex-direction: column;
+    }
+
+    #header > .nav_bar_container > .nav_bar > .nav_links
+    {
+        margin-bottom: 8rem;
+    }
+    
+    #header > .nav_bar_container.active > .nav_bar
+    {
+        display: flex;
+    }
+
+    .nav_text
+    {
+        font-size: 5rem;
+    }
+
+    .hamburger
+    {
+        display: block;
+
+        margin: 1rem 2rem;
+    }
+    
+
+    #main.active
+    {
+        display: none;
+    }
+
+    #footer.active
+    {
+        display: none;
+    }
+
+    .hamburger.active .bar:nth-child(2)
+    {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1)
+    {
+        transform: translateY(2.5rem) rotate(50deg);
+    }
+
+    .hamburger.active .bar:nth-child(3)
+    {
+        transform: translateY(-2.5rem) rotate(-50deg);
+    }
+}
+
+@media only screen and (max-width: 500px), screen and (max-height: 1000px)
+{
+
+    #header
+    {
+        height: auto;
+    }
+
+    #header > .nav_bar_container.active
+    {
+        height: auto;
+    }
+
+    #main > .form_container > .left > .contact-us_container > .contact-us_text
+    {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    
+    #footer
+    {
+        flex-flow: row nowrap;
+        height: auto;
+    }
+    
+    .bar
+    {
+
+        width: 6rem;
+        height: 1.3rem;
+
+        margin: .5rem 0rem;
+    }
+    
+    .hamburger.active .bar:nth-child(1)
+    {
+        transform: translateY(1.8rem) rotate(50deg);
+    }
+
+    .hamburger.active .bar:nth-child(3)
+    {
+        transform: translateY(-1.8rem) rotate(-50deg);
+    }
+}
