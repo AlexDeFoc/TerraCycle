@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+:root
+{
+    /* Notation guide :
+        Themes:
+        - g = default
+        - d = dark mode
+        - l = light mode
+        Types:
+        - c = color
+        - bc = background color
+    */
+
+    font-size: 62.5%;
+    --c_g__Text: hsl(0, 0%, 98%);
+    --bc_g__NavBar: hsl(108, 30%, 50%);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: var(--c_g__Text);
+    list-style: none;
+    text-decoration: none;
+}
+
+#wrapper
+{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%; /*This saves you a lot!*/
+}
+
+#header
+{
+    width: 100%;
+    height: 12vh;
+    background-color: var(--bc_g__NavBar);
+    
+}
+
+.nav-bar
+{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.nav-text
+{
+    font-size: 2rem;
+}
+
+#main
+{
+    width: 100%;
+    min-height: calc(100vh - 93px - 232.5px);
+    padding-bottom: 50px;
+    
+}
+
+.temp_container
+{
+    width: 100%;
+    height: 10%;
+}
+
+.temp_container > h1
+{
+    color: black;
+}
+
+#footer
+{
+    width: 100%;
+    height: 30vh;
+    background-color: black;
+    
+}
+
+/* 
+@media screen and (min-width: 1024px)
+{
+
+} */

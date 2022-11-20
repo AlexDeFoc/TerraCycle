@@ -166,23 +166,45 @@ body
     margin-right: 4rem;
 } */
 
-main
+/* main
 {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
 }
 
 main > #wrapper
 {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
 }
 
-.hero
+/* .hero
 {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+    height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0,5), rgba(0, 0, 0, 0,5), url("/img/hero.png"));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} */
+
+.hero-big
+{
+    height: 70vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.hero-big > .hero
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero.png);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 /* Media Queries */
