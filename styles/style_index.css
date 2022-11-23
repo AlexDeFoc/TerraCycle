@@ -6,14 +6,23 @@
         - g = default aka general
         - d = dark mode
         - l = light mode
+
         Types:
         - c = color
         - bc = background color
         - bo = border color
-        Order:
+        
+        Type Order:
         - c
         - bc
         - bo
+
+        Variable Order:
+        - Type
+        - Theme
+        - Purpose
+        - Kind (Felul)
+        - [Optional] - Special, Ex : selected or hover effect
     */
 
     font-size: 62.5%;
@@ -43,6 +52,8 @@
     width: 100vw;
     height: 100vh;
     max-width: 100%; /*This saves you a lot!*/
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 #header
@@ -82,8 +93,8 @@
 #main
 {
     width: 100%;
-    min-height: calc(100vh - 113.39px - 283.5px);
-    padding-bottom: 50px;
+    height: 100%;
+    padding: 50px 0;
 
     display: flex;
     flex-flow: row nowrap;
