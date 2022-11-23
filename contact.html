@@ -9,95 +9,68 @@
     <title>Terra Cycle</title>
 </head>
 <body>
-    <!-- Nav Bar -->
-    <header id="header">
+    <div id="wrapper">
+        <header id="header">
+            <div class="nav-bar">
+                <li class="nav-link"><a href="index.html" class="nav-text">Acasă</a></li>
+                <li class="nav-link"><a href="services.html" class="nav-text">Servicii</a></li>
+                <li class="nav-link"><a href="about-us.html" class="nav-text">Despre</a></li>
+            </div>
+        </header>
 
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+        <main id="main">
+            <div class="form-container">
+                <div class="hero">
+                    <p class="hero-text">Contactează-ne!</p>
+                </div>
 
-        <div class="nav_bar_container">
-            <nav class="nav_bar">
-                <li class="nav_links"><a class="nav_text" href="index.html">Acasă</a></li>
-                <li class="nav_links"><a class="nav_text" href="#">Servicii</a></li>
-                <li class="nav_links"><a class="nav_text" href="#">Despre</a></li>
-                <li class="nav_links"><a class="nav_text" href="contact.html">Contact</a></li>
-            </nav>
-        </div>
-    </header>
+                <div class="form-field">
+                    <form action="https://formspree.io/f/xknekldj" method="POST">
+                        <section class="name_container">
+                            <section class="name">
+                                <label for="name">Numele</label><br>
+                                <input type="text" id="name" name="Name:" value="Mihai"></input>
+                            </section>
+                        </section>
 
-    <!-- Main Show -->
-    <main id="main">
+                        <section class="email_container">
+                            <section class="email">
+                                <label for="email">Email</label><br>
+                                <input type="email" id="email" name="Email:" value="mihail123@gmail.com"></input>
+                            </section>
+                        </section>
+                        
+                        <section class="reason_container">
+                            <section class="reason">
+                                <label for="reason">Motivul Contactării</label><br>
+                                <textarea rows="7" cols="25" id="reason" name="Motivul contactării" value="În ultima perioadă am probleme cu..."></textarea>
+                            </section>
+                        </section>
 
-        <div id="main_bg">
-        </div>
-
-        <div class="form_container">
-            <div class="left">
-                <div class="contact-us_container">
-                    <p class="contact-us_text">Contactează-ne!</p>
+                        <section class="submit_container">
+                            <section class="submit">
+                                <input type="submit" value="Trimite"></input>
+                            <section>
+                        </section>
+                    </form>
                 </div>
             </div>
-            <div class="right">
-                <form action="https://formspree.io/f/xknekldj" method="POST">
-                    <section class="name_container">
-                        <section class="name">
-                            <label for="name">Numele</label>
-                            <input type="text" id="name" name="Name:" value="Mihai"></input>
-                        </section>
-                    </section>
+        </main>
 
-                    <section class="email_container">
-                        <section class="email">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="Email:" value="mihail123@gmail.com"></input>
-                        </section>
-                    </section>
-                    
-                    <section class="reason_container">
-                        <section class="reason">
-                            <label for="reason">Motivul Contactării</label>
-                            <textarea rows="7" cols="40" id="reason" name="Motivul contactării" value="În ultima perioadă am probleme cu..."></textarea>
-                        </section>
-                    </section>
-
-                    <section class="submit_container">
-                        <section class="submit">
-                            <input type="submit" value="Trimite"></input>
-                        <section>
-                    </section>
-                </form>
+        <footer id="footer">
+            <div class="footer-bar">
+                <li class="footer-link"><a href="contact.html" class="footer-text">Contact</a></li>
+                <li class="footer-link"><a href="#" class="footer-text">Termeni & Condiții</a></li>
+                <li class="footer-link"><a href="#" class="footer-text">Politică și confidențialitate</a></li>
             </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="socials_container">
-            
-            <svg class="twitter_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30" width="45px" height="45px">
-                <a href="https://twitter.com/__TerraCycle">
-                    <g id="surface99685638">
-                        <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 28 6.9375 C 27.042969 7.363281 26.015625 7.648438 24.9375 7.777344 C 26.039062 7.117188 26.882812 6.070312 27.28125 4.824219 C 26.25 5.4375 25.109375 5.882812 23.894531 6.121094 C 22.921875 5.085938 21.535156 4.4375 20 4.4375 C 17.054688 4.4375 14.664062 6.824219 14.664062 9.769531 C 14.664062 10.1875 14.714844 10.597656 14.804688 10.984375 C 10.371094 10.761719 6.441406 8.640625 3.808594 5.410156 C 3.351562 6.199219 3.089844 7.113281 3.089844 8.09375 C 3.089844 9.945312 4.027344 11.578125 5.460938 12.53125 C 4.585938 12.503906 3.761719 12.265625 3.042969 11.867188 C 3.042969 11.890625 3.042969 11.910156 3.042969 11.933594 C 3.042969 14.519531 4.882812 16.675781 7.324219 17.164062 C 6.875 17.285156 6.402344 17.351562 5.917969 17.351562 C 5.574219 17.351562 5.238281 17.316406 4.914062 17.253906 C 5.59375 19.375 7.5625 20.917969 9.898438 20.960938 C 8.070312 22.390625 5.773438 23.242188 3.273438 23.242188 C 2.84375 23.242188 2.417969 23.21875 2 23.167969 C 4.359375 24.683594 7.164062 25.566406 10.175781 25.566406 C 19.988281 25.566406 25.351562 17.4375 25.351562 10.386719 C 25.351562 10.15625 25.347656 9.925781 25.335938 9.699219 C 26.378906 8.945312 27.285156 8.007812 28 6.9375 Z M 28 6.9375 "/>
-                    </g>
-                </a>
-            </svg>
-
-            <a href="https://www.instagram.com/_terra_cycle_/">
-                <svg class="instagram_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="45px" height="45px">
-                        <g id="surface99690188">
-                            <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 8 3 C 5.242188 3 3 5.242188 3 8 L 3 16 C 3 18.757812 5.242188 21 8 21 L 16 21 C 18.757812 21 21 18.757812 21 16 L 21 8 C 21 5.242188 18.757812 3 16 3 Z M 8 5 L 16 5 C 17.652344 5 19 6.347656 19 8 L 19 16 C 19 17.652344 17.652344 19 16 19 L 8 19 C 6.347656 19 5 17.652344 5 16 L 5 8 C 5 6.347656 6.347656 5 8 5 Z M 17 6 C 16.449219 6 16 6.449219 16 7 C 16 7.550781 16.449219 8 17 8 C 17.550781 8 18 7.550781 18 7 C 18 6.449219 17.550781 6 17 6 Z M 12 7 C 9.242188 7 7 9.242188 7 12 C 7 14.757812 9.242188 17 12 17 C 14.757812 17 17 14.757812 17 12 C 17 9.242188 14.757812 7 12 7 Z M 12 9 C 13.652344 9 15 10.347656 15 12 C 15 13.652344 13.652344 15 12 15 C 10.347656 15 9 13.652344 9 12 C 9 10.347656 10.347656 9 12 9 Z M 12 9 "/>
-                        </g>
-                </svg>
-            </a>
-        </div>
-        <div class="copyright_container">
-            <p class="copyright">Toate drepturile rezervate către TerraCycle © 2022</p>
-        </div>
-    </footer>
-
-    <script src="scripts/script_contact_temp.js"></script>
+            <div class="footer-bar">
+                <li class="footer-social"><a href="#" class="footer-text"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 30 27.5" style="fill:#fafafa;"><path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path></svg></a></li>
+                <li class="footer-social"><a href="#" class="footer-text"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,239" style="fill:#fafafa;"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M28,6.937c-0.957,0.425 -1.985,0.711 -3.064,0.84c1.102,-0.66 1.947,-1.705 2.345,-2.951c-1.03,0.611 -2.172,1.055 -3.388,1.295c-0.973,-1.037 -2.359,-1.685 -3.893,-1.685c-2.946,0 -5.334,2.389 -5.334,5.334c0,0.418 0.048,0.826 0.138,1.215c-4.433,-0.222 -8.363,-2.346 -10.995,-5.574c-0.458,0.788 -0.721,1.704 -0.721,2.683c0,1.85 0.941,3.483 2.372,4.439c-0.874,-0.028 -1.697,-0.268 -2.416,-0.667c0,0.023 0,0.044 0,0.067c0,2.585 1.838,4.741 4.279,5.23c-0.447,0.122 -0.919,0.187 -1.406,0.187c-0.343,0 -0.678,-0.034 -1.003,-0.095c0.679,2.119 2.649,3.662 4.983,3.705c-1.825,1.431 -4.125,2.284 -6.625,2.284c-0.43,0 -0.855,-0.025 -1.273,-0.075c2.361,1.513 5.164,2.396 8.177,2.396c9.812,0 15.176,-8.128 15.176,-15.177c0,-0.231 -0.005,-0.461 -0.015,-0.69c1.043,-0.753 1.948,-1.692 2.663,-2.761z"></path></g></g></svg></a></li>
+            </div>
+            <div class="footer-copyright">
+                <p class="footer-text">Drepturi de autor TerraCycle 2022</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
