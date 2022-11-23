@@ -225,7 +225,7 @@ textarea
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-.footer-bar, .footer-copyright
+.footer-bar
 {
     width: 100%;
     height: 100%;
@@ -276,16 +276,18 @@ textarea
     padding-left: 10%;
 }
 
+.footer-copyright
+{
+    height: auto;
+    min-height: 1rem;
+    grid-row: 3 / 4;
+    border-bottom: .5rem solid var(--bo_g__FooterBar);
+}
+
 .footer-text
 {
     font-size: 2rem;
-}
-
-.footer-copyright
-{
-    grid-row: 3 / 4;
-    /* border-bottom: .5rem solid var(--bo_g__FooterBar); */
-
+    padding: 3rem 0;
 }
 
 @media screen and (min-width: 1024px)
