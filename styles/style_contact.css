@@ -284,8 +284,8 @@ textarea
 .footer-copyright
 {
     grid-row: 3 / 4;
-    border-bottom: .5rem solid var(--bo_g__FooterBar);
-    height: auto;
+    /* border-bottom: .5rem solid var(--bo_g__FooterBar); */
+
 }
 
 @media screen and (min-width: 1024px)
