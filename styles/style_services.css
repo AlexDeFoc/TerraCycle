@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+:root
+{
+    /* Notation guide :
+        Themes:
+        - g = default aka general
+        - d = dark mode
+        - l = light mode
+
+        Types:
+        - c = color
+        - bc = background color
+        - bo = border color
+        
+        Type Order:
+        - c
+        - bc
+        - bo
+
+        Variable Order:
+        - Type
+        - Theme
+        - Purpose
+        - Kind (Felul)
+        - [Optional] - Special, Ex : selected or hover effect
+    */
+
+    font-size: 62.5%;
+    --c_g__Text: hsl(0, 0%, 98%);
+
+    --bc_g__NavBar: hsl(108, 30%, 50%);
+    --bc_g__FooterBar: hsl(108, 40%, 30%);
+
+    --bo_g__NavBar: hsl(108, 60%, 30%);
+    --bo_g__FooterBar: hsl(108, 70%, 10%);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: var(--c_g__Text);
+    list-style: none;
+    text-decoration: none;
+}
+
+#wrapper
+{
+    display: grid;
+    grid-template-rows: auto auto auto;
+
+    max-width: 100%; /*This saves you a lot!*/
+}
+
+#header
+{
+    width: 100vw;
+    height: 12vh;
+}
+
+#footer
+{
+    width: 100vw;
+    height: 30vh;
+}

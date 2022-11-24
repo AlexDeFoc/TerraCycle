@@ -70,7 +70,7 @@
     height: 100vh;
     max-width: 100%; /*This saves you a lot!*/
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 #header
@@ -83,6 +83,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    grid-row: 1 / 2;
 }
 
 .nav-bar
@@ -120,6 +121,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    grid-row: 2 / 3;
 }
 
 .form-container
@@ -220,6 +223,7 @@ textarea
     width: 100%;
     height: 30vh;
     background-color: var(--bc_g__FooterBar);
+    grid-row: 3 / 4;
 
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
