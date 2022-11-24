@@ -28,7 +28,7 @@
     font-size: 62.5%;
     --c_g__Text: hsl(0, 0%, 98%);
     --c_g__TitleText: hsl(0, 0%, 8%);
-    --c_g__ItemText: hsl(0, 0%, 12%);
+    --c_g__ItemText: hsl(0, 0%, 5%);
 
     --bc_g__NavBar: hsl(108, 30%, 50%);
     --bc_g__FooterBar: hsl(108, 40%, 30%);
@@ -161,10 +161,60 @@
 
 .products > .table > .item:nth-child(1)
 {
+    display: flex;
+    flex-flow: column nowrap;
     background-image: url(../img/products/Bluză.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.products > .table > .item:nth-child(2)
+{
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: url(../img/products/Tricou.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.products > .table > .item:nth-child(3)
+{
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: url(../img/products/Ecuson.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.products > .table > .item:nth-child(4)
+{
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: url(../img/products/Abțibild.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.products > .table > .item > .sub-title
+{
+    font-size: 2.9rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    color: gray;
+    text-align: left;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: .1rem;
+    -webkit-text-stroke-color: hsl(0, 0%, 30%, 0.7);
+}
+
+.products > .table > .item > .description
+{
+    text-align: start;
+    color: var(--c_g__ItemText);
 }
 
 #footer
