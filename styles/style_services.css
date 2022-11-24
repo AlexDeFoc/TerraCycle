@@ -27,6 +27,8 @@
 
     font-size: 62.5%;
     --c_g__Text: hsl(0, 0%, 98%);
+    --c_g__TitleText: hsl(0, 0%, 8%);
+    --c_g__ItemText: hsl(0, 0%, 12%);
 
     --bc_g__NavBar: hsl(108, 30%, 50%);
     --bc_g__FooterBar: hsl(108, 40%, 30%);
@@ -43,6 +45,7 @@
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     color: var(--c_g__Text);
+    /* color: black; */
     list-style: none;
     text-decoration: none;
 }
@@ -50,7 +53,7 @@
 #wrapper
 {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: grid;
     grid-template-rows: auto auto auto;
 
@@ -98,6 +101,70 @@
     width: 100vw;
     height: auto;
     grid-row: 2 / 3;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.primary, .secondary, .offers, .products
+{
+    width: 60%;
+    height: 40%;
+
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    margin-top: 5rem;
+
+    background-color: rgba(18, 61, 180, 0.555);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.products
+{
+    margin-bottom: 5rem;
+}
+
+.title p
+{
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--c_g__TitleText);
+}
+
+.table p
+{
+    font-size: 2rem;
+    color: var(--c_g__ItemText);
+}
+
+.table
+{
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.item
+{
+    min-height: 40rem;
+    min-width: 40rem;
+    margin: 2rem 0;
+    background-color: rgba(18, 61, 180, 0.555);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.products > .table > .item:nth-child(1)
+{
+    background-image: url(../img/products/Bluză.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #footer
@@ -113,7 +180,7 @@
     grid-template-rows: 60% 30% 10%;
 }
 
-.footer-bar, .footer-copyright
+.footer-bar
 {
     width: 100%;
     height: 100%;
@@ -173,7 +240,8 @@
 {
     grid-row: 3 / 4;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 5ch;
 
     display: flex;
     flex-direction: row;
@@ -181,5 +249,39 @@
     justify-content: center;
     align-items: center;
 
+    background-color: var(--bc_g__FooterBar);
     border-top: .5rem solid var(--bo_g__FooterBar);
+}
+
+@media screen and (min-width: 1024px)
+{
+    .nav-bar
+    {
+        width: 80%;
+    }
+
+    .nav-text
+    {
+        font-size: 3rem;
+    }
+
+    .primary .table >*
+    {
+        flex: 0 0 25%;
+    }
+
+    .secondary .table >*, .offers .table >*, .products .table >*
+    {
+        flex: 0 0 20%;
+    }
+
+    .table
+    {
+        flex-flow: row wrap;
+    }
+
+    .item
+    {
+        margin: 2rem;
+    }
 }
