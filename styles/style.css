@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+:root
+{
+    font-size: 62.5%; /* Sets Font to base ten */
+
+    /* Variables */
+    /*Tdark means ThemeDark*/
+    /*__ means :: example ::selection*/
+    --background-color-Tdark_page: #070707;
+    --background-color-Tdark-nav: #6baa5c;
+    --background-color-Tdark-nav_hamburger-bars: #eeeeee;
+    --background-color_Tdark_left-form: #092203a2;
+    --background-color_Tdark_right-form: rgba(255, 255, 255, 0.603);
+    --background-color-Tdark-footer: #0e3f10a8;
+    --color-white_Tdark_page_text: #eeeeee;
+    --color-white_Tdark_text_form: #070707;
+    --color-white_Tdark__selected_text_form: #ACCEF7;
+}
+
+*
+{
+    box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    
+    color: var(--color-white_Tdark_page_text);
+    
+    list-style: none;
+    text-decoration: none;
+
+    overflow-x: hidden;
+}
+
+body
+{
+    width: 100vw;
+
+    background-color: var(--background-color-Tdark_page);
+}
+
+/* Nav Bar */
+#header
+{
+    width: 100vw;
+    height: 10vh;
+
+    background-color: var(--background-color-Tdark-nav);
+}
+
+#header > .nav_bar_container > .nav_bar
+{
+    width: 100vw;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger
+{
+    display: none;
+
+    margin: 1rem 2rem;
+}
+
+.bar
+{
+    display: block;
+
+    width: 8rem;
+    height: 2rem;
+
+    margin: .5rem 0rem;
+
+    border-radius: 10%;
+
+    background-color: var(--background-color-Tdark-nav_hamburger-bars);
+}
+
+#header > .nav_bar_container > .nav_bar > .nav_links
+{
+    margin: 0 4rem;
+}
+
+.nav_text
+{
+    font-size: 3rem;
+}
+
+/* Main Show */
+/* Main Show */
+/* Main Show */
+/* Main Show */
+
+
+/* #main 
+{
+    width: 100vw;
+    height: 100vh;
+
+    margin-top: 3rem;
+}
+
+#main > .main_container > .article_container
+{
+    display: flex;
+    flex-flow: column wrap;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+#main > .main_container > .article_container > .article
+{
+    margin: 2rem 7rem;
+}
+
+#main > .main_container > .article_container > .article > .article_text
+{
+    font-size: 1.75rem;
+
+    text-indent: 2rem;
+    text-align: justify;
+} */
+
+
+/* Footer */
+/* Footer */
+/* Footer */
+/* Footer */
+
+/* #footer
+{
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-flow: column wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--background-color-Tdark-footer);
+}
+
+#footer > .copyright_container > .copyright
+{
+    font-size: 2rem;
+}
+
+#footer > .copyright_container > .copyright
+{
+    font-size: 2rem;
+}
+
+#footer > .socials_container > .twitter_icon
+{
+    margin-right: 4rem;
+} */
+
+/* main
+{
+    width: 100vw;
+    height: 100vh;
+}
+
+main > #wrapper
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* .hero
+{
+    height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0,5), rgba(0, 0, 0, 0,5), url("/img/hero.png"));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} */
+
+.hero-big
+{
+    height: 70vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.hero-big > .hero
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero.png);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 500px), screen and (max-height: 1000px)
+{
+
+    #header
+    {
+        height: auto;
+    }
+
+    #header > .nav_bar.active
+    {
+        height: auto;
+    }
+
+    #footer
+    {
+        flex-flow: row nowrap;
+        height: auto;
+    }
+    
+    .bar
+    {
+
+        width: 6rem;
+        height: 1.3rem;
+
+        margin: .5rem 0rem;
+    }
+    
+    .hamburger.active .bar:nth-child(1)
+    {
+        transform: translateY(1.8rem) rotate(50deg);
+    }
+
+    .hamburger.active .bar:nth-child(3)
+    {
+        transform: translateY(-1.8rem) rotate(-50deg);
+    }
+}
