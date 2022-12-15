@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+:root
+{
+    /* Notation guide :
+        Themes:
+        - g = default aka general
+        - d = dark mode
+        - l = light mode
+
+        Types:
+        - c = color
+        - bc = background color
+        - bo = border color
+        
+        Type Order:
+        - c
+        - bc
+        - bo
+
+        Variable Order:
+        - Type
+        - Theme
+        - Purpose
+        - Kind (Felul)
+        - [Optional] - Special, Ex : selected or hover effect
+    */
+
+    font-size: 62.5%;
+    --c_g__Text: hsl(0, 8%, 3%);
+    --c_g__Text-Table: hsl(0, 0%, 12%);
+
+    --bc_g__NavBar: hsl(108, 30%, 50%);
+    --bc_g__FooterBar: hsl(108, 40%, 30%);
+
+    --bo_g__NavBar: hsl(108, 60%, 30%);
+    --bo_g__FooterBar: hsl(108, 70%, 10%);
+}
+
+*
+{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: var(--c_g__Text);
+    /* list-style: none; */
+    text-decoration: none;
+}
+
+#wrapper
+{
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto auto auto;
+
+    max-width: 100%; /*This saves you a lot!*/
+}
+
+#header
+{
+    width: 100vw;
+    height: 12vh;
+    grid-row: 1 / 2;
+
+    background-color: var(--bc_g__NavBar);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar
+{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.nav-text
+{
+    font-size: 2rem;
+}
+
+.nav-link
+{
+    border-bottom: .5rem solid var(--bo_g__NavBar);
+}
+
+#main
+{
+    width: 100%;
+    min-height: calc(100vh - 12vh - 30vh);
+    padding: 50px 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.main-body
+{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.contents-text
+{
+    color: var(--c_g__Text-Table);
+}
+
+.main-body .title .contents-text
+{
+    font-size: 3.5rem;
+}
+
+.last-updated .contents-text
+{
+    font-size: 2rem;
+    opacity: 50%;
+}
+
+.table-of-contents .title .contents-text
+{
+    font-size: 3rem;
+}
+
+.contents-table
+{
+    padding: 2rem 2rem;
+}
+
+.contents-element .contents-text
+{
+    font-size: 2rem;
+}
+
+#footer
+{
+    width: 100vw;
+    height: auto;
+
+    grid-row: 3 / 4;
+
+    background-color: var(--bc_g__FooterBar);
+
+    display: grid;
+    grid-template-rows: 60% 30% 10%;
+}
+
+.footer-bar
+{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    border-top: .5rem solid var(--bo_g__FooterBar);
+}
+
+.footer-bar:nth-child(1)
+{
+    flex-direction: column;
+    grid-row: 1 / 2;
+}
+.footer-bar:nth-child(2)
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 2 / 3;
+
+    justify-items: left;
+}
+
+.footer-link
+{
+    padding: 1rem 0;
+}
+
+.footer-link:nth-child(1)
+{
+    border-bottom: .3rem solid var(--bo_g__FooterBar);
+}
+
+.footer-social:nth-child(1)
+{
+    justify-self: right;
+    padding-right: 10%;
+
+    border-right: .3rem solid var(--bo_g__FooterBar);
+}
+
+.footer-social:nth-child(2)
+{
+    padding-left: 10%;
+}
+
+.footer-text
+{
+    font-size: 2rem;
+}
+
+.footer-copyright
+{
+    grid-row: 3 / 4;
+    width: 100%;
+    height: auto;
+    min-height: 5ch;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bc_g__FooterBar);
+    border-top: .5rem solid var(--bo_g__FooterBar);
+}
+
+@media screen and (min-width: 1024px)
+{
+    .nav-bar
+    {
+        width: 80%;
+    }
+
+    .nav-text
+    {
+        font-size: 3rem;
+    }
+}
